@@ -17,11 +17,27 @@ id_user int,
 id_movie int,
 primary key (id_user, id_movie),
 foreign key (id_user) references usuario(id))
+--
+```
 
+### 2. en el archivo appsettings.json tienes que cambiar "cadenaSQL" por el numbre de tu servidor
+```json
+  "ConnectionStrings": {
+    "cadenaSQL": "Server={Nombre_de_tu_servidor_SQL}; Database=DB_Movies; Trusted_Connection=True; TrustServerCertificate=True;"
+  }
+```
 
+### 3. tambien, se debe cambiar en el archivo Models/DbMovieContext.cs
 
-###2. en el archivo appsettings.json tienes que cambiar "cadenaSQL" por el numbre de tu servidor
+```csharp
 
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+ 
+    => optionsBuilder.UseSqlServer("Server={Nombre_de_tu_servidor_SQL};Database=DB_Movies;Trusted_Connection=True;TrustServerCertificate=True;");
+
+```
+
+### 4. Ejecutar
 
 
 
