@@ -20,3 +20,11 @@ foreign key (id_user) references usuario(id))
 
 
 
+###2. en el archivo appsettings.json tienes que cambiar "cadenaSQL" por el numbre de tu servidor
+
+
+
+
+
+
+
