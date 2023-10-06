@@ -37,7 +37,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
 ```
 
-### 4. Ejecutar
+### 4. Ejecutar, si encuentra problemas con los paquetes hay que instalar paquetes NuGet tales como "Microsoft.EntityFrameworkCore.SqlServer" y Microsoft.EntityFrameworkCore.Tools
 
 
 
