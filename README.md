@@ -1,6 +1,9 @@
 # MoviesAppBack
+
+### 1. se debe crear la base da datos en Sql server, con el siguiente script
 ```sql
--- create database DB_Movies
+--
+create database DB_Movies
 use DB_Movies
 
 create table usuario(
@@ -14,4 +17,6 @@ id_user int,
 id_movie int,
 primary key (id_user, id_movie),
 foreign key (id_user) references usuario(id))
+
+
 
